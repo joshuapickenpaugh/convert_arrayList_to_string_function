@@ -39,16 +39,15 @@
     Public Function DisplayResult() As String
 
         Dim arr As New ArrayList
-        'Dim arr() As Integer
 
         For choosenNum As Integer = _intNum1 To _intNum2
             If (choosenNum Mod 2 = 0) Then
-                'MsgBox(choosenNum, , choosenNum)
+
                 arr.Add(choosenNum)
             End If
         Next
 
-        'Return arr
+        'Converts the arrayList to a string (function is string type):
         Return Strings.Join(arr.ToArray, ",")
 
     End Function
