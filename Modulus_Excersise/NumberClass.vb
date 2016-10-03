@@ -36,13 +36,12 @@
 
     End Sub
 
-    Public Function DisplayResult() As String
+    Public Function DivisibleByTwo() As String
 
         Dim arr As New ArrayList
 
         For choosenNum As Integer = _intNum1 To _intNum2
             If (choosenNum Mod 2 = 0) Then
-
                 arr.Add(choosenNum)
             End If
         Next
@@ -51,4 +50,41 @@
         Return Strings.Join(arr.ToArray, ",")
 
     End Function
+
+    Public Function DivisibleByThree() As String
+
+        Dim arr As New ArrayList
+
+        For choosenNum As Integer = _intNum1 To _intNum2
+            If (choosenNum Mod 3 = 0) Then
+                arr.Add(choosenNum)
+            End If
+        Next
+
+        'Converts the arrayList to a string (function is string type):
+        Return Strings.Join(arr.ToArray, ",")
+
+    End Function
+
+    Public Function DivisibleByFive() As String
+
+        Dim arr As New ArrayList
+
+        For choosenNum As Integer = _intNum1 To _intNum2
+            If (choosenNum Mod 5 = 0) Then
+                arr.Add(choosenNum)
+            End If
+        Next
+
+        'Converts the arrayList to a string (function is string type):
+        Return Strings.Join(arr.ToArray, ",")
+
+    End Function
+
+    Public Sub Clear()
+
+        _intNum1 = 0
+        _intNum2 = 0
+
+    End Sub
 End Class
